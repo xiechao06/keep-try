@@ -1,5 +1,3 @@
-// import is from '@sindresorhus/is'
-
 function keepTrySync (...elements) {
   let ret = void 0
   let prevException = null
