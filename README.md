@@ -13,6 +13,21 @@ A functional way to get a fallback value
 
 ## Usage
 
+### common js
+
+```javascript
+const keepTry = require('keep-try').default
+const keepTrySync = require('keep-try').sync
+```
+
+### esm
+
+```javascript
+import keepTry, { sync as keepTrySync } from 'keep-try'
+```
+
+## An example
+
 ```javascript
 import keepTry, { sync as keepTrySync } from 'keep-try'
 
