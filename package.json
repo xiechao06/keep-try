@@ -1,6 +1,6 @@
 {
   "name": "keep-try",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "try to do a chain of somethings until one success",
   "main": "dist/index.js",
   "module": "index.js",
