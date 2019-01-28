@@ -1,11 +1,11 @@
-import is from '@sindresorhus/is'
+// import is from '@sindresorhus/is'
 
 function keepTrySync (...elements) {
   let ret = void 0
   let prevException = null
   let prevExceptions = []
   for (let el of elements) {
-    if (is.function(el)) {
+    if (typeof el === 'function') {
       try {
         ret = el(prevException, prevExceptions)
         prevException = null
@@ -35,7 +35,7 @@ async function keepTry (...elements) {
 
   for (let el of elements) {
     try {
-      ret = await (is.function(el) ? el(prevException, prevExceptions) : el)
+      ret = await (typeof el === 'function' ? el(prevException, prevExceptions) : el)
       prevException = null
       break
     } catch (error) {

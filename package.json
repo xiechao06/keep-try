@@ -5,8 +5,8 @@
   "main": "dist/index.js",
   "module": "index.js",
   "scripts": {
-    "test": "standard && tape -r @babel/register test.js | tap-spec",
-    "dev": "npm run test; chokidar *.js -c \"standard && tape -r @babel/register test.js | tap-spec\"",
+    "test": "standard *.js && tape -r @babel/register test.js | tap-spec",
+    "dev": "npm run test; chokidar *.js -c \"standard *.js && tape -r @babel/register test.js | tap-spec\"",
     "build-cjs": "parcel build index.js -t node --no-minify",
     "build-browser": "parcel build index.js -t browser --no-minify --global keepTry -o keep-try.browser.js",
     "build-browser-min": "parcel build index.js -t browser --global keepTry -o keep-try.browser.min.js",
@@ -29,7 +29,6 @@
     "@babel/plugin-transform-runtime": "^7.2.0",
     "@babel/preset-env": "^7.3.1",
     "@babel/register": "^7.0.0",
-    "@sindresorhus/is": "^0.14.0",
     "chokidar-cli": "^1.2.1",
     "colortape": "^0.1.2",
     "parcel": "^1.11.0",

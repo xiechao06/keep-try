@@ -41,7 +41,7 @@ test('sync', async t => {
   t.end()
 })
 
-test.only('async', async t => {
+test('async', async t => {
   t.equal(await keepTry(), void 0)
   t.equal(await keepTry(1), 1)
   let return1 = td.func('return1')
