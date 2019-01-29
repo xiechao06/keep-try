@@ -1,4 +1,4 @@
-function keepTrySync (...elements) {
+export function keepTrySync (...elements) {
   let ret = void 0
   let prevException = null
   let prevExceptions = []
@@ -24,9 +24,7 @@ function keepTrySync (...elements) {
   return ret
 }
 
-export const sync = keepTrySync
-
-async function keepTry (...elements) {
+export async function keepTry (...elements) {
   let ret = void 0
   let prevException = null
   let prevExceptions = []
@@ -43,5 +41,3 @@ async function keepTry (...elements) {
   }
   return ret
 }
-
-export default keepTry

@@ -1,5 +1,5 @@
 import test from 'tape'
-import keepTry, { sync as keepTrySync } from './index'
+import { keepTry, keepTrySync } from './index'
 import td from 'testdouble'
 
 test('sync', async t => {
